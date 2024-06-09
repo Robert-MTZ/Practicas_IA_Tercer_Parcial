@@ -1,6 +1,21 @@
-# Practica02_002_ShellCort
+# Practica02_002_ShellSort
 # Roberto_Martinez_Bailon_21310216_6E
 # Ingenieria_en_Mecatronica
+
+"""
+
+El algoritmo de ordenamiento Shell Sort es un método de clasificación que se basa en la técnica de inserción, pero mejora su eficiencia al reducir el número de intercambios necesarios.
+Funciona dividiendo la lista en sublistas más pequeñas y luego ordenándolas de forma independiente utilizando el método de inserción estándar. La diferencia clave con el método de
+inserción es que el Shell Sort no ordena las sublistas por completo en cada paso, sino que solo intercambia elementos que están a una distancia fija entre sí.
+Esta distancia se va reduciendo gradualmente en cada iteración hasta que llega a ser 1, momento en el que el algoritmo se comporta como una versión mejorada del método de inserción estándar.
+
+Funcionamiento:
+Se elige un "intervalo" inicial, que determina la distancia entre los elementos que se compararán y, si es necesario, intercambiarán. Este intervalo puede ser determinado de diferentes maneras, como utilizar la secuencia de intervalos de Shell, que es una secuencia predefinida de números.
+Se compara y, si es necesario, se intercambian los elementos que están separados por el intervalo elegido.
+Se repite este proceso para todas las sublistas formadas por el intervalo dado.
+Se reduce el intervalo y se repiten los pasos 2 y 3 hasta que el intervalo sea 1, momento en el que se realiza una última pasada con el método de inserción estándar.
+
+"""
 
 def shell_sort(List): # creamos la funcion que implementa el algoritmo de ordenamiento shell sort y se le adjudica una lista en la cual se guardaran los valores
 
